@@ -52,10 +52,16 @@ button#b_13 {
 
 button#b_31 {
   border-radius: 0px 0px 0px 10px;
+  border-bottom: 5px solid #1d3fcc;
+}
+
+button#b_32 {
+  border-bottom: 5px solid #1d3fcc;
 }
 
 button#b_33 {
   border-radius: 0px 0px 10px 0px;
+  border-bottom: 5px solid #1d3fcc;
 }
 
 .choose_xo {
@@ -94,4 +100,16 @@ div#winner_report {
 
 p {
   color: #62687d;
+}
+
+#reload img {
+  width: auto;
+  height: auto;
+  max-width: 30px;
+  transition: transform 0.2s;
+}
+
+#reload:hover {
+  cursor: pointer;
+  transform: rotate(280deg);
 }

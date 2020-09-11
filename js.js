@@ -43,6 +43,7 @@ let verifyWinner = function () {
     document.getElementById("winner_report").innerHTML = "Ganó O";
     document.getElementById("winner_report").style.background =
       "rgb(255, 120, 46, 0.2)";
+    winnerStop();
   } else if (
     diag_1133 == -3 ||
     diag_1331 == -3 ||
@@ -57,10 +58,12 @@ let verifyWinner = function () {
     document.getElementById("winner_report").innerHTML = "Ganó X";
     document.getElementById("winner_report").style.background =
       "rgb(255, 120, 46, 0.2)";
+    winnerStop();
   } else if (Count == 8) {
     document.getElementById("winner_report").innerHTML = "Empate";
     document.getElementById("winner_report").style.background =
       "rgb(255, 120, 46, 0.2)";
+    winnerStop();
   }
 };
 
@@ -233,6 +236,21 @@ b_choose["b_33"].addEventListener("click", () => {
   Count++;
 });
 
+document.getElementById("reload").addEventListener("click", reload_app);
+
 function reload_app() {
   window.location.reload();
+  console.log("Funciona");
 }
+
+const winnerStop = function () {
+  document.getElementById("b_11").disabled = true;
+  document.getElementById("b_12").disabled = true;
+  document.getElementById("b_13").disabled = true;
+  document.getElementById("b_21").disabled = true;
+  document.getElementById("b_22").disabled = true;
+  document.getElementById("b_23").disabled = true;
+  document.getElementById("b_31").disabled = true;
+  document.getElementById("b_32").disabled = true;
+  document.getElementById("b_33").disabled = true;
+};
