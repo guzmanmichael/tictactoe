@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;700&display=swap");
+
+* {
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #182039;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+div#app {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85vw;
+  height: 90vh;
+  max-width: 600px;
+  background-color: #1e2745;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  flex-direction: column;
+}
+
+div#game_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 220px;
+  height: 220px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button#b_11 {
+  border-radius: 10px 0px 0px 0px;
+}
+
+button#b_13 {
+  border-radius: 0px 10px 0px 0px;
+}
+
+button#b_31 {
+  border-radius: 0px 0px 0px 10px;
+}
+
+button#b_33 {
+  border-radius: 0px 0px 10px 0px;
+}
+
+.choose_xo {
+  width: 70px;
+  height: 70px;
+  background-color: #3e64ff;
+  color: #dddddd;
+  border: none;
+  border-radius: 0;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 30px;
+  color: #fff;
+}
+
+div#winner_report {
+  width: 100px;
+  height: 39.2px;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ff782e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+p {
+  color: #62687d;
+}
