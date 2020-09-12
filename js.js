@@ -1,12 +1,10 @@
+let initStateP = [0, 1, 3];
+var randomItem = initStateP[Math.floor(Math.random() * initStateP.length)];
 //Crear el estado y el contador
-let State;
+let State = false;
 let Count = 0;
 
 //Función que inicia la APP
-let initApp = function () {
-  initState = [true, false];
-  State = initState[1];
-};
 
 //Función que cambia de jugador
 let handlePicker = function (e) {
@@ -96,6 +94,9 @@ b_choose["b_11"].addEventListener("click", () => {
     verifyWinner();
   }
   Count++;
+  play();
+  let b_11 = possibleP.indexOf("b_11");
+  possibleP.splice(b_11, 1);
 });
 
 b_choose["b_12"].addEventListener("click", () => {
@@ -112,6 +113,9 @@ b_choose["b_12"].addEventListener("click", () => {
     verifyWinner();
   }
   Count++;
+  play();
+  let b_12 = possibleP.indexOf("b_12");
+  possibleP.splice(b_12, 1);
 });
 
 b_choose["b_13"].addEventListener("click", () => {
@@ -130,6 +134,9 @@ b_choose["b_13"].addEventListener("click", () => {
     verifyWinner();
   }
   Count++;
+  play();
+  let b_13 = possibleP.indexOf("b_13");
+  possibleP.splice(b_13, 1);
 });
 
 b_choose["b_21"].addEventListener("click", () => {
@@ -146,6 +153,9 @@ b_choose["b_21"].addEventListener("click", () => {
     verifyWinner();
   }
   Count++;
+  play();
+  let b_21 = possibleP.indexOf("b_21");
+  possibleP.splice(b_21, 1);
 });
 
 b_choose["b_22"].addEventListener("click", () => {
@@ -166,6 +176,9 @@ b_choose["b_22"].addEventListener("click", () => {
     verifyWinner();
   }
   Count++;
+  play();
+  let b_22 = possibleP.indexOf("b_22");
+  possibleP.splice(b_22, 1);
 });
 
 b_choose["b_23"].addEventListener("click", () => {
@@ -182,6 +195,9 @@ b_choose["b_23"].addEventListener("click", () => {
     verifyWinner();
   }
   Count++;
+  play();
+  let b_23 = possibleP.indexOf("b_23");
+  possibleP.splice(b_23, 1);
 });
 
 b_choose["b_31"].addEventListener("click", () => {
@@ -200,6 +216,9 @@ b_choose["b_31"].addEventListener("click", () => {
     verifyWinner();
   }
   Count++;
+  play();
+  let b_31 = possibleP.indexOf("b_31");
+  possibleP.splice(b_31, 1);
 });
 
 b_choose["b_32"].addEventListener("click", () => {
@@ -216,6 +235,9 @@ b_choose["b_32"].addEventListener("click", () => {
     verifyWinner();
   }
   Count++;
+  play();
+  let b_32 = possibleP.indexOf("b_32");
+  possibleP.splice(b_32, 1);
 });
 
 b_choose["b_33"].addEventListener("click", () => {
@@ -234,6 +256,9 @@ b_choose["b_33"].addEventListener("click", () => {
     verifyWinner();
   }
   Count++;
+  play();
+  let b_33 = possibleP.indexOf("b_33");
+  possibleP.splice(b_33, 1);
 });
 
 document.getElementById("reload").addEventListener("click", reload_app);
@@ -253,4 +278,31 @@ const winnerStop = function () {
   document.getElementById("b_31").disabled = true;
   document.getElementById("b_32").disabled = true;
   document.getElementById("b_33").disabled = true;
+};
+
+possibleP = [
+  "b_11",
+  "b_12",
+  "b_13",
+  "b_21",
+  "b_22",
+  "b_23",
+  "b_31",
+  "b_32",
+  "b_33",
+];
+
+let play = function () {
+  console.log(Count);
+  if (Count % 2 == 0) {
+    console.log("Par");
+  } else {
+    let initEvent = setTimeout(play_imp, 20);
+  }
+};
+
+let play_imp = () => {
+  console.log("Impar");
+  var iP = possibleP[Math.floor(Math.random() * possibleP.length)];
+  b_choose[iP].click();
 };
