@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="css2.css" />
+    <title>Tic IA Toc</title>
+  </head>
+  <body>
+    <section>
+      <div id="app">
+        <div id="wrapper">
+          <div id="one_player">Jugar contra la inteligencia artificial</div>
+          <div id="two_player">Jugar contra alguien localmente</div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document
+        .getElementById("one_player")
+        .addEventListener("click", function () {
+          window.location.replace("/index2.html");
+        });
+      document
+        .getElementById("two_player")
+        .addEventListener("click", function () {
+          window.location.replace("/index1.html");
+        });
+    </script>
+  </body>
+</html>
